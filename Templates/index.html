@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section id="flight-management">
+    <h2>Emirates Flight Management</h2>
+    <p>Manage passenger data, view flights, and access backend features built with Java and Spring Boot.</p>
+    <!-- You can add more details or features here -->
+</section>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="toggleDropdown(event)">List of flights</a>
+                    <ul class="dropdown-content" id="flightDropdown">
+                        <li><a href="#flight1">Emirates</a></li>
+                        <li><a href="#flight2">Air India AI101</a></li>
+                        <li><a href="#flight3">IndiGo 6E203</a></li>
+                        <li><a href="#flight4">SpiceJet SG456</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://en.wikipedia.org/wiki/Flight_management_system">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <script>
+            function toggleDropdown(event) {
+                event.preventDefault();
+                var dropdown = document.getElementById('flightDropdown');
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                } else {
+                    dropdown.style.display = 'block';
+                }
+            }
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                var dropdown = document.getElementById('flightDropdown');
+                var dropbtn = document.querySelector('.dropbtn');
+                if (!dropdown.contains(event.target) && !dropbtn.contains(event.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+            </script>
+        <!--
+            This section represents the closing tag for the navigation bar (<nav>) in the Flight Management System's index.html template.
+            The navigation bar typically contains links for navigating between different pages or features of the application.
+            Ensure that all navigation elements are properly structured and accessible before this closing tag.
+        -->
+        </nav>
+    </header>
+    <main>
+        <section id="home" style="background-image: url('background.jpg'); background-size: cover; background-position: center; padding: 40px 0;">
+                <h1 style="color: #050505; text-shadow: 1px 1px 4px #333;">Welcome to Our Page</h1>
+                <h2 style="color: #000000;">Flight Management</h2>
+                <p style="color: #0e0d0dfe;">Manage passenger data, view flights, and access backend features built with Java and Spring Boot.</p>
+            </div>
+        </section>
+        <!-- Add more sections as needed -->
+</main>
+           
+        </section>
+        <!-- Add more sections as needed -->
+    </main>
+</body>
+</html>
+<style>
+    .top-right-logo {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .top-right-logo img {
+        width: 80px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+</style>
+<div class="top-right-logo">
+    <img src="logo.png" alt="Logo">
+</div>
